@@ -20,3 +20,11 @@ export const deleteSighting = (id) => {
     })
 }
 
+export const putSighting = (id, payload) => {
+    return fetch(baseURL + id, {
+        method: 'PUT',
+        body: JASON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' } 
+    })
+} 
+
